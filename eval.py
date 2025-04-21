@@ -4,7 +4,7 @@ from sklearn.metrics import roc_auc_score
 import math    
 
 # Read CSV file    
-df = pd.read_csv('llama_cogvlm1.csv')    
+df = pd.read_csv('eval/ShT_llama_cogvlm1.csv')    
 
 # PSNR calculation function    
 def psnr(mse):    
