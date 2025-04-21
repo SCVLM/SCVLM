@@ -15,21 +15,21 @@ def anomaly_score(psnr_list, max_psnr, min_psnr):
     return 1 - ((psnr_list - min_psnr) / (max_psnr - min_psnr))    
 
 # Modified smoothing function
-def anomaly_diffusion_v1(memloss, window_size):
+def anomaly_spread_v1(memloss, window_size):
     memloss_new = memloss.copy()
     for i in range(window_size, len(memloss) - window_size):
         # Replace the current item with the maximum value within the window range
         memloss_new[i] = max(memloss[i - window_size:i + window_size + 1])
     return memloss_new
 
-def anomaly_diffusion_v2(memloss, window_size, gama = 0.3):
+def anomaly_spread_v2(memloss, window_size, gama = 0.3):
     memloss_new = memloss.copy()
     for i in range(window_size, len(memloss) - window_size):
         window = memloss[i - window_size:i + window_size + 1]
-        non_zero_count = np.count_nonzero(window != 0)  # 统计窗口内 0 的个数
+        non_zero_count = np.count_nonzero(window != 0)  
         threshold = int(len(window)*gama)
         if non_zero_count >= threshold:
-            memloss_new[i] =  max(memloss[i - window_size:i + window_size + 1])  # 如果超过阈值，则当前帧设为 0
+            memloss_new[i] =  max(memloss[i - window_size:i + window_size + 1]) 
     
     return memloss_new
 
