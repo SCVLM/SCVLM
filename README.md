@@ -3,7 +3,7 @@
 
 # MEMVLM
 
-This is the **official code repository** for **Make VLMs Memorize Normality: Memory-Enhanced Vision-Language Model for Video Anomaly Detection**.
+This is the **official code repository** for **Make VLMs Memorize Normality: Memory-Enhanced Vision-Language Model for Video Anomaly Detection(MEMVLM)**.
 
 ## 🔍 Introduction
 
