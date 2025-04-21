@@ -51,7 +51,7 @@ smoothing_window = 6
 
 # Group by video_id (extracted from the path) and process each group    
 for video_id, group in df.groupby(df['image_path'].str.extract(r'/(\d{2}_\d{4})/')[0]):    
-#for video_id, group in df.groupby(df['image_path'].str.extract(r'/(\d{2})/')[0]):
+#for video_id, group in df.groupby(df['image_path'].str.extract(r'/(\d{2})/')[0]): #For Avenue dataset
     # Extract memory loss, scores, and labels    
     memloss = group['memloss'].values    
     labels = group['label'].values    
