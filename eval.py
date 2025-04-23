@@ -22,7 +22,7 @@ def anomaly_spread_v1(memloss, window_size):
         memloss_new[i] = max(memloss[i - window_size:i + window_size + 1])
     return memloss_new
 
-def anomaly_spread_v2(memloss, window_size, gama = 0.3):
+def anomaly_spread_v2(memloss, window_size, gama = 0.7):
     memloss_new = memloss.copy()
     for i in range(window_size, len(memloss) - window_size):
         window = memloss[i - window_size:i + window_size + 1]
@@ -46,7 +46,7 @@ scene_auc_scores = {}
 scene_auc_combined = {}    
 
 # Smoothing window size (number of frames to look before and after the current frame)    
-smoothing_window = 6
+smoothing_window = 15
 
 
 # Group by video_id (extracted from the path) and process each group    
