@@ -1,13 +1,13 @@
-## Make VLMs Memorize Normality: Memory-Enhanced Vision-Language Model for Video Anomaly Detection 👋
+## Make VLMs Memorize Normality: Sparsity-Controllable Vision-Language Model for Video Anomaly Detection 👋
 ![MEMVLM](https://github.com/user-attachments/assets/830f86d5-5622-4547-8c54-543fa40b7dd4)
 
 # MEMVLM
 
-This is the **official code repository** for **Make VLMs Memorize Normality: Memory-Enhanced Vision-Language Model for Video Anomaly Detection(MEMVLM)**.
+This is the **official code repository** for **Make VLMs Memorize Normality: Sparsity-Controllable Vision-Language Model for Video Anomaly Detection**.
 
 ## 🔍 Introduction
 
-MEMVLM is a vision-language model designed for multimodal anomaly detection.
+SCVLM is a vision-language model designed for multimodal anomaly detection.
 
 This repository currently provides evaluation code for measuring model performance.
 
